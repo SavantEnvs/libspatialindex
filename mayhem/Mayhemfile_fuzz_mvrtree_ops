@@ -1,0 +1,10 @@
+project: savantenvs/libspatialindex
+target: fuzz-mvrtree-ops
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mvrtree-ops/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_mvrtree_ops
+    libfuzzer: true
+    timeout: 5

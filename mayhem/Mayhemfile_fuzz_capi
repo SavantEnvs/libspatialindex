@@ -1,0 +1,10 @@
+project: savantenvs/libspatialindex
+target: fuzz-capi
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-capi/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_capi
+    libfuzzer: true
+    timeout: 5
